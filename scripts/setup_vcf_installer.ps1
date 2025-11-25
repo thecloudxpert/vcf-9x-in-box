@@ -1,7 +1,7 @@
 # Author: William Lam
 
 $ESXiServer = "esx01.vcf.lab"
-$ESXiRootPassowrd = "VMware1!"
+$ESXiRootPassword = "VMware1!"
 
 $VCFInstallerVMName = "sddcm01"
 $VCFInstallerFQDN = "sddcm01.vcf.lab"
@@ -37,7 +37,7 @@ Function My-Logger {
 }
 
 My-Logger "Connecting to ESXi Host $VIServer ..."
-$viConnection = Connect-VIServer $ESXiServer -User root -Password $ESXiRootPassowrd -WarningAction SilentlyContinue
+$viConnection = Connect-VIServer $ESXiServer -User root -Password $ESXiRootPassword -WarningAction SilentlyContinue
 
 My-Logger "Waiting for VCF Installer UI to be ready ..."
 while(1) {
